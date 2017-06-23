@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" >
+<head th:replace="base :: head"  >
+    <meta charset="UTF-8" />
+    <title>Balance Form</title>
+</head>
+<body>
+
+<nav th:replace="base :: navbar"  >
+
+</nav>
+<form action="#" th:action="@{/Balance}" th:object="${account}" method="post">
+    <p>Balance:                 <input type="text" th:field="*{balance}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>

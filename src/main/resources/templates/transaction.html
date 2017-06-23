@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" >
+<head th:replace="base :: head"  >
+    <meta charset="UTF-8" />
+    <title>Transaction Form</title>
+</head>
+<body>
+
+<nav th:replace="base :: navbar"  >
+
+</nav>
+<form action="#" th:action="@{/transaction}" th:object="${transaction}" method="post">
+    <p>Account Number:          <input type="text" th:field="*{accountNumber}" /></p>
+    <p>User Name:               <input type="text" th:field="*{userName}" /></p>
+    <p>Balance:                 <input type="text" th:field="*{balance}" /></p>
+    <p>Amount:                  <input type="text" th:field="*{amount}" /></p>
+    <p>Reason For withdrawal:   <input type="text" th:field="*{reason}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>

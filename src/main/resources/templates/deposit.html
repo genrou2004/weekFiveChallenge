@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" >
+<head th:replace="base :: head"  >
+    <meta charset="UTF-8" />
+    <title>ATM Form</title>
+    </head>
+<body>
+
+<nav th:replace="base :: navbar"  >
+
+</nav>
+
+<form th:action="@{/deposit}" th:object="${account}" method="post">
+    <div class="form-group">
+        <label for="exampleInputText1">Account Number: </label>
+        <input type="text" class="form-control" id="exampleInputText1"  th:field="*{accountNumber}"/>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputText2">Amount: </label>
+        <input type="number" class="form-control" id="exampleInputText2" th:field="*{amount}"/>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="www.thymeleaf.org">
+<head th:replace="base :: head"  >
+    <meta charset="UTF-8" />
+    <title>Trasnaction History Form</title>
+</head>
+<body>
+
+<nav th:replace="base :: navbar"  >
+
+</nav>
+<table class="table table-striped">
+    <tr>
+        <th>Account Number</th>
+        <th>User Name</th>
+        <th>Balance</th>
+        <th>Amount</th>
+        <th>Reason</th>
+    </tr>
+    <tr th:each="accounts : ${account}">
+        <td th:text="${accounts.accountNumber}"></td>
+        <td th:text="${accounts.userName}"></td>
+        <td th:text="${accounts.balance}"></td>
+        <td th:text="${accounts.amount}"></td>
+        <td th:text="${accounts.reason}"></td>
+    </tr>
+</table>
+</body>
+</html>
